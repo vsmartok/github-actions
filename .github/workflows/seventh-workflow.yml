@@ -1,0 +1,12 @@
+name: Seventh GitHub Actions Workflow
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Runs every Sunday at midnight
+
+jobs:
+  weekly-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display current date and time
+        run: date
