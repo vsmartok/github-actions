@@ -7,7 +7,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: List files in the current directory before copy
-              run: lsds -a
+              run: ls -a
             # - uses: actions/checkout@v6
             - name: Copy files
               run: |
