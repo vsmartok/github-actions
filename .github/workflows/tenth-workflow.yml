@@ -2,6 +2,8 @@ name: Tenth GitHub Actions Workflow
 
 on: [push]
 
+run-name: Display GitHub Context Information
+
 jobs:
   nineth-command:
     runs-on: ubuntu-latest
