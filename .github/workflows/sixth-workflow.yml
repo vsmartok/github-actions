@@ -12,3 +12,8 @@ on:
       - "**.html"
 
 jobs:
+  command-first:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show Ubuntu version
+        run: lsb_release -a
