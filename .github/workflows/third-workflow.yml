@@ -6,5 +6,7 @@ jobs:
     run-first-command:
         runs-on: ubuntu-latest
         steps:
-            - name: Display the Python version on Ubuntu
-              run: python3 --version
+            - name: List files in the current directory and the current directory path
+              run: |
+                pwd
+                ls -a
