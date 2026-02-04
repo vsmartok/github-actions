@@ -1,0 +1,12 @@
+name: Nineth GitHub Actions Workflow
+
+on:
+  repository_dispatch:
+    types: [nineth-event-test-id]
+
+jobs:
+  nineth-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display a message for the nineth workflow
+        run: echo "Value name ${{ github.event.client_payload.title }}"
