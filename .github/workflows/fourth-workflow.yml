@@ -3,7 +3,7 @@ name: Fourth GitHub Actions Workflow
 on: 
     workflow_run:
         workflows: 
-            - Third GitHub Actions Workflow"
+            - Third GitHub Actions Workflow
         types:
             - completed
 
