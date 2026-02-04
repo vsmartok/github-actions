@@ -3,9 +3,9 @@ name: Eighth GitHub Actions Workflow
 on: 
   workflow_dispatch:
     inputs:
-      example-title:
+      exampleTitle:
         description: Type your title here
-        required: false
+        required: true
         type: string
         default: default value
 
@@ -17,3 +17,4 @@ jobs:
         run: |
           node -v
           npm -v
+          echo "Title is: ${{ inputs.exampleTitle }}"
