@@ -6,7 +6,8 @@ jobs:
     run-first-command:
         runs-on: ubuntu-latest
         steps:
-            - name: List files in the current directory and the current directory path
-              run: |
-                pwd
-                ls -a
+            - name: List files in the current directory and copy repository
+              run: ls -a
+            - uses: actions/checkout@v6
+            - name: List files after checkout
+              run: ls -a
