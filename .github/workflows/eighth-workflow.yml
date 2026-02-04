@@ -1,7 +1,13 @@
 name: Eighth GitHub Actions Workflow
 
-on:
-  workflow_dispatch
+on: 
+  workflow_dispatch:
+    inputs:
+      example-title:
+        description: Type your title here
+        required: false
+        type: string
+        default: default value
 
 jobs:
   display-node-versions:
