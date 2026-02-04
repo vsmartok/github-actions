@@ -1,0 +1,13 @@
+name: Eleventh GitHub Actions Workflow
+
+on: [push]
+
+run-name: GitHub Variables Reference
+
+jobs:
+  first-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Events name
+        run: |
+          echo $GITHUB_REF
