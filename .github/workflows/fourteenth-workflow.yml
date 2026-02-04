@@ -1,0 +1,24 @@
+name: Fourteenth GitHub Actions Workflow
+
+on: push
+
+run-name: GitHub Actions Cache
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Cache node_modules
+        id: cache-node-modules
+        uses: actions/cache@v5
+        with:
+            path: ~/.npm
+            key: "cache-file"
+
+      - name: Display Cache
+        run: echo '${{ steps.cache-node-modules.outputs }}'
+
+      - name: Install Dependencies
+        run: npm install
