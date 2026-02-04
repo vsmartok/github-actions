@@ -1,0 +1,15 @@
+name: Fourth GitHub Actions Workflow
+
+on: 
+    workflow_run:
+        workflows: 
+            - Third GitHub Actions Workflow"
+        types:
+            - completed
+
+jobs:
+    hello-command:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Display message "Hello"
+              run: echo "Hello"
