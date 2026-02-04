@@ -1,0 +1,13 @@
+name: Fifth GitHub Actions Workflow
+
+on: [push, issues, pull_request]
+
+jobs:
+    first-command:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Display message for push or issues event
+              run: |
+                echo "This is the fiveth GitHub Actions workflow triggered by a ${{ github.event_name }} event."
+                echo $GITHUB_SHA
+                echo $GITHUB_REF
