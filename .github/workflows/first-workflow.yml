@@ -10,3 +10,7 @@ jobs:
               run: echo "Hello, World! Text from the first GitHub Actions workflow."
             - name: List files in the repository
               run: ls -la
+            - name: Display the current NodeJS and npm versions
+              run: |
+                node -v
+                npm -v
