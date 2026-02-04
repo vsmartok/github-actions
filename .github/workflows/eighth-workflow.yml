@@ -28,3 +28,4 @@ jobs:
           node -v
           npm -v
           echo "Title is: ${{ inputs.exampleTitle }}"
+          echo "Choice is: ${{ inputs.exampleChoice }}"
