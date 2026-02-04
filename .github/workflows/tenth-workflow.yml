@@ -1,0 +1,15 @@
+name: Tenth GitHub Actions Workflow
+
+on: [push]
+
+jobs:
+  nineth-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display GitHub context
+        id: display-github-context
+        run: |
+          echo "Value name ${{ toJson(github) }}"
+          echo ${{ toJson(runner) }}
+          echo ${{ toJson(job) }}
+          echo ${{ toJson(steps) }}
