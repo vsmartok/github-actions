@@ -1,0 +1,27 @@
+name: Second GitHub Actions Workflow
+
+on: push
+
+jobs:
+    run-first-command:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Display the NodeJS and npm versions on Ubuntu
+              run: |
+                node -v
+                npm -v
+    run-second-command-parallel:
+        runs-on: windows-latest
+        steps:
+            - name: Display the NodeJS and npm versions on Windows
+              run: |
+                node -v
+                npm -v
+    run-third-command:
+        runs-on: macos-latest
+        needs: run-first-command
+        steps:
+            - name: Display the NodeJS and npm versions on macOS
+              run: |
+                node -v
+                npm -v
