@@ -4,11 +4,27 @@ on: [push]
 
 run-name: GitHub Variables Reference
 
+env:
+  SAMPLE_ENV_VAR: "This is a sample environment variable"
+
 jobs:
   first-command:
     runs-on: ubuntu-latest
+    env:
+      JOB_ENV_VAR: "This is a job-level environment variable"
     steps:
       - name: Events name
+        env:
+          STEP_ENV_VAR: "This is a step-level environment variable"
         run: |
           echo $GITHUB_REF
           echo '${{ github.ref }}'
+          echo '-----------------------------'
+          echo $SAMPLE_ENV_VAR
+          echo '${{ env.SAMPLE_ENV_VAR }}'
+          echo '-----------------------------'
+          echo $JOB_ENV_VAR
+          echo '${{ env.JOB_ENV_VAR }}'
+          echo '-----------------------------'
+          echo $STEP_ENV_VAR
+          echo '${{ env.STEP_ENV_VAR }}'
