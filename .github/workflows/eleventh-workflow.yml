@@ -11,3 +11,4 @@ jobs:
       - name: Events name
         run: |
           echo $GITHUB_REF
+          echo '${{ github.ref }}'
