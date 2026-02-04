@@ -1,0 +1,24 @@
+name: Thirteenth GitHub Actions Workflow
+
+on: push
+
+run-name: GitHub Functions and Expressions Reference
+
+jobs:
+  first-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: First Step
+        run: sleep 30
+      - name: Runs on cancelled
+        if: ${{ cancelled() }}
+        run: echo "Runs on cancelled"
+      - name: Runs on any case
+        if: ${{ always() }}
+        run: echo "Runs on any case"
+      - name: Runs on success
+        if: ${{ success() }}
+        run: echo "Runs on success"
+      - name: Runs on failure
+        if: ${{ failure() }}
+        run: echo "Runs on failure"
