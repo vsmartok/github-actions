@@ -10,6 +10,6 @@ jobs:
         id: display-github-context
         run: |
           echo "Value name ${{ toJson(github) }}"
-          echo ${{ toJson(runner) }}
-          echo ${{ toJson(job) }}
-          echo ${{ toJson(steps) }}
+          echo '${{ toJson(runner) }}'
+          echo '${{ toJson(job) }}'
+          echo '${{ toJson(steps) }}'
