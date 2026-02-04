@@ -8,6 +8,16 @@ on:
         required: true
         type: string
         default: default value
+      exampleChoice:
+        description: 'Select on of the options'
+        required: true
+        default: 'Value 1'
+        type: choice
+        options:
+          - Value 0
+          - Value 1
+          - Value 2
+          - Value 3
 
 jobs:
   display-node-versions:
