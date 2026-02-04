@@ -1,0 +1,14 @@
+name: Sixth GitHub Actions Workflow
+
+on:
+  push:
+    branches:
+      - main
+      - pages/*
+    # tags:
+    #   - v1.*
+    #   - "!v1.2.1"
+    paths:
+      - "**.html"
+
+jobs:
