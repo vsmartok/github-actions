@@ -9,8 +9,16 @@ on:
             - completed
 
 jobs:
-    hello-command:
+    success-command:
         runs-on: ubuntu-latest
+        if: ${{ github.event.workflow_run.conclusion == 'success' }}
         steps:
             - name: Display message "Hello"
-              run: echo "Hello"
+              run: echo "Success Hello"
+
+    failure-command:
+        runs-on: ubuntu-latest
+        if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+        steps:
+            - name: Display message "Goodbye"
+              run: echo "Failure Goodbye"
