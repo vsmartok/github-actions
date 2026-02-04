@@ -2,7 +2,7 @@ name: Fifth GitHub Actions Workflow
 
 on: 
   issues:
-    types: [edited, closed]
+    types: [edited, deleted]
   pull_request:
     types: [assigned, closed]
 
