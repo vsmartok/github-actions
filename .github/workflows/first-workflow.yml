@@ -1,0 +1,10 @@
+name: First GitHub Actions Workflow
+
+on: [push]
+
+jobs:
+    run-first-command:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Display some text
+              run: echo "Hello, World! Text from the first GitHub Actions workflow."
