@@ -1,6 +1,10 @@
 name: Fifth GitHub Actions Workflow
 
-on: [push, issues, pull_request]
+on: 
+  issues:
+    types: [edited, deleted]
+  pull_request:
+    types: [assigned, closed]
 
 jobs:
     first-command:
