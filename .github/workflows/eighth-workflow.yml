@@ -1,0 +1,13 @@
+name: Eighth GitHub Actions Workflow
+
+on:
+  workflow_dispatch
+
+jobs:
+  display-node-versions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display the NodeJS and npm versions on Ubuntu
+        run: |
+          node -v
+          npm -v
