@@ -11,3 +11,4 @@ jobs:
       - name: Show GitHub Context Variables
         run: |
           echo '${{ vars.STATUS }}'
+          echo '${{ secrets.PASSWORD }}'
