@@ -1,0 +1,13 @@
+name: Twelfth GitHub Actions Workflow
+
+on: [push]
+
+run-name: GitHub Variables and Secrets Reference
+
+jobs:
+  display-variables:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show GitHub Context Variables
+        run: |
+          echo '${{ vars.STATUS }}'
