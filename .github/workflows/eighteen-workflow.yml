@@ -1,0 +1,12 @@
+name: Eighteen GitHub Action Workflow
+
+on: push
+
+runs-name: Eighteen Workflow - Custom Composite Action
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Use Custom Composite Action

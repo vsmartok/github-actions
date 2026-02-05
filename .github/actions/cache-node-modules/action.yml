@@ -1,0 +1,20 @@
+name: Install and Cache Node Modules
+description: This action installs and caches node modules for faster builds in GitHub Actions.
+
+runs:
+  using: composite
+  steps:
+    - name: Cache node modules
+      id: cache-node-modules
+      uses: actions/cache@v5
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-cache-file-${{ hashFiles('**/package-lock.json') }}
+
+    - name: Display Cache
+      run: echo '${{ toJson(steps.cache-node-modules.outputs) }}'
+      shell: bash
+
+    - name: Install Dependencies
+      run: npm install
+      shell: bash
