@@ -13,5 +13,7 @@ jobs:
         - 80:80
     steps:
       - name: Display NodeJS version
-        run: node -v
+        run: |
+          node -v
+          cat /etc/os-release
     
