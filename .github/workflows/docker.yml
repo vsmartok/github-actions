@@ -16,4 +16,9 @@ jobs:
         run: |
           node -v
           cat /etc/os-release
+      
+      - name: Print new node version
+        uses: docker://node:16-alpine
+        with:
+          args: -v
     
