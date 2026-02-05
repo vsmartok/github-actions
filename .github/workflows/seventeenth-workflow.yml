@@ -1,0 +1,16 @@
+name: Seventeenth GitHub Actions Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      username:
+        description: Username to greet
+        required: true
+        type: string
+        default: Guest
+
+jobs:
+  call-workflow:
+    uses: ./.github/workflows/workflow.yml
+    with:
+      username: ${{ github.event.inputs.username }}
