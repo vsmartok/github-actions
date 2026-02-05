@@ -30,7 +30,7 @@ jobs:
         run: |
           value=`cat math-result.txt`
           echo "Previous value: $value"
-          expr $value * 2 >> math-result.txt
+          expr $value \* 2 >> math-result.txt
 
       - name: Upload result file
         uses: actions/upload-artifact@v6
