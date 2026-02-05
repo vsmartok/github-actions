@@ -1,11 +1,18 @@
 name: Install and Cache Node Modules
 description: This action installs and caches node modules for faster builds in GitHub Actions.
 
+inputs:
+  caching:
+    description: Enable or disable caching of node modules
+    required: false
+    default: 'true'
+
 runs:
   using: composite
   steps:
     - name: Cache node modules
       id: cache-node-modules
+      if: ${{ inputs.caching == 'true'}}
       uses: actions/cache@v5
       with:
         path: ~/.npm
