@@ -2,7 +2,7 @@ name: Eighteen GitHub Action Workflow
 
 on: push
 
-runs-name: Eighteen Workflow - Custom Composite Action
+run-name: Eighteen Workflow - Custom Composite Action
 
 jobs:
   build:
@@ -10,3 +10,4 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: Use Custom Composite Action
+        uses: ./.github/actions/cache-node-modules
