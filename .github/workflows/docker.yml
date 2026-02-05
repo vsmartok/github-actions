@@ -5,6 +5,9 @@ on: push
 jobs:
   test-docker-container:
     runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.0-debian
     container:
       image: node:12-alpine3.15
       env:
@@ -12,6 +15,8 @@ jobs:
       ports:
         - 80:80
     steps:
+      - name: Display service image
+        run: echo '${{ toJson(job.services) }}'
       - name: Display NodeJS version
         run: |
           node -v
