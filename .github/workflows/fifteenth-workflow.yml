@@ -37,6 +37,7 @@ jobs:
         with:
           name: math-result
           path: math-result.txt
+          overwrite: true
 
   second-job:
     runs-on: ubuntu-latest
