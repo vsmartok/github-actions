@@ -26,6 +26,9 @@ jobs:
         with:
           name: math-result
 
+      - name: Display filex
+        run: ls -la
+
       - name: Display result
         run: |
           value=`cat math-result.txt`
